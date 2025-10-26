@@ -57,8 +57,11 @@ Your workflow when creating a pull request:
      of the pull request template.
 2. If the project does not contain a `package.json` file
    - Do not add anything to the `Proof` section
-3. If the `gh` operation fails because there is already a pull request present, add the output of the `proof` script
-   as a pull request comment using `gh`. Ensure that the output is added inside of formatting triple backticks.
+3. If the `gh` operation fails because there is already a pull request present,
+   1. If the project has a `package.json` file, add the output of the `proof` script as a pull request
+      comment using `gh`. Ensure that the output is added inside of formatting triple backticks.
+   2. If the project does not have a `package.json` file, add a summary of the changes as a comment
+      using `gh`.
 
 **Error Handling**:
 - If no commits exist on the current branch, inform the user and suggest committing changes first
