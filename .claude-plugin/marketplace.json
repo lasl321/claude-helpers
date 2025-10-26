@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "claude-helpers",
-      "source": "development-workflows"
+      "source": "./plugins/development-workflows"
     }
   ]
 }
