@@ -18,16 +18,14 @@ Your workflow when creating a pull request:
    - Identify the base branch (typically develop or master) for the PR
 
 2. **Pull Request Content Generation**:
-   - Look for a pull request template in `.github/pull-request-template.md`. If the template cannot be found fail the operation immediately.
-   - If a template exists, use it as the structure for the PR description
-   - If no template exists, create a comprehensive PR description that includes:
-     * A clear, concise title summarizing the changes
-     * **Summary**: High-level overview of what was changed and why
-     * **Changes**: Bulleted list of specific modifications
-     * **Testing**: How the changes were tested or should be tested
-     * **Related Issues**: References to any related issues or tickets
+   - Look for a pull request template named `pull-request-template.md` in
+     1. The current directory
+     2. Another directory in the current Claude context
+     3. In an environment variable named `PULL_REQUEST_TEMPLATE`
+   - If the pull request template cannot be found in the previously mentioned locations, fail the operation
+     immediately and inform the user. Otherwise use the template structure.
    - Analyze commit messages to extract relevant information
-   - For this project specifically, ensure the PR follows Conventional Commit conventions mentioned in CLAUDE.local.md
+   - Always follow Conventional Commit conventions for commits
 
 3. **Branch and Commit Validation**:
    - Ensure all changes are committed before creating the PR
