@@ -1,0 +1,25 @@
+{
+  "name": "claude-helpers",
+  "owner": {
+    "name": "Luis Sotomayor",
+    "email": "luis.sotomayor@gmail.com"
+  },
+  "description": "A collection of helpful commands, skills, and agents for Claude Code",
+  "version": "1.0.0",
+  "pluginRoot": "./plugins",
+  "plugins" : [
+    {
+      "name":"claude-helpers",
+      "source": "./development-workflow",
+      "description":"Tools for development workflows",
+      "version":"1.0.0",
+      "author": {
+        "name":"Luis Sotomayor",
+        "email": "luis.sotomayor@gmail.com"
+      },
+      "keywords": ["git", "github"],
+      "category": "Development",
+      "strict": true
+    }
+  ]
+}
