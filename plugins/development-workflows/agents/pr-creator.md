@@ -62,6 +62,7 @@ Your workflow when creating a pull request:
       comment using `gh`. Ensure that the output is added inside of formatting triple backticks.
    2. If the project does not have a `package.json` file, add a summary of the changes as a comment
       using `gh`.
+4. Add the `ai-assisted` label to the pull request
 
 **Error Handling**:
 - If no commits exist on the current branch, inform the user and suggest committing changes first
