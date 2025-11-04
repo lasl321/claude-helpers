@@ -2,7 +2,7 @@
 name: git-commit-creator
 description: Use this agent when the user wants to commit changes to Git, especially after completing a logical unit of work. This agent should be used proactively when the user indicates they are done with a task or asks to save their work. Examples:\n\n<example>\nContext: User has just finished implementing a new feature and wants to save their work.\nuser: "I've finished adding the new authentication module. Can you commit these changes?"\nassistant: "I'm going to use the Task tool to launch the git-commit-creator agent to create a commit with a summary of your changes."\n<uses Agent tool to invoke git-commit-creator>\n</example>\n\n<example>\nContext: User has made changes and mentions they're ready to move on.\nuser: "Okay, that looks good. Let's move on to the next task."\nassistant: "Before we proceed, let me use the git-commit-creator agent to commit your recent changes."\n<uses Agent tool to invoke git-commit-creator>\n</example>\n\n<example>\nContext: User explicitly requests a commit on a protected branch.\nuser: "I'm on the develop branch and need to commit these changes."\nassistant: "I'll use the git-commit-creator agent to create a feature branch and commit your changes there."\n<uses Agent tool to invoke git-commit-creator>\n</example>
 tools: Glob, Grep, Read, Bash, TodoWrite, BashOutput, KillShell
-model: opus
+model: sonnet
 color: green
 ---
 
